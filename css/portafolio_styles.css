@@ -34,7 +34,7 @@ nav {
 .nav-logo {
   font-family: 'Josefin Sans', monospace;
   font-size: 13px;
-  color: #7c6fff;
+  color: #29e629;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -68,7 +68,7 @@ nav {
 .hero-tag {
   font-family: 'Changa', monospace;
   font-size: 11px;
-  color: #7c6fff;
+  color: #29e629;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
@@ -81,7 +81,7 @@ nav {
   display: inline-block;
   width: 20px;
   height: 1px;
-  background: #7c6fff;
+  background: #29e629;
 }
 h1 {
   font-family: 'Cinzel', sans-serif;
@@ -91,10 +91,10 @@ h1 {
   color: #f0f0ff;
   margin-bottom: 1rem;
 }
-h1 span { color: #7c6fff; }
+h1 span { color: #29e629; }
 .hero-desc {
   font-size: 14px;
-  color: #8888a8;
+  color: #a0a0c0;
   line-height: 1.8;
   max-width: 480px;
   margin-bottom: 2rem;
@@ -103,8 +103,8 @@ h1 span { color: #7c6fff; }
 .hero-cta { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
 
 .btn-primary {
-  background: #7c6fff;
-  color: #fff;
+  background: #24ce24;
+  color: #ffff;
   border: none;
   padding: 10px 22px;
   border-radius: 6px;
@@ -117,7 +117,7 @@ h1 span { color: #7c6fff; }
   display: inline-flex;
   align-items: center;
 }
-.btn-primary:hover { background: #9a8fff; }
+.btn-primary:hover { background: #8fce8f; }
 
 .btn-outline {
   background: transparent;
@@ -133,12 +133,12 @@ h1 span { color: #7c6fff; }
   display: inline-flex;
   align-items: center;
 }
-.btn-outline:hover { border-color: #7c6fff; color: #e2e2f0; }
+.btn-outline:hover { border-color: #29e629; color: #e2e2f0; }
 
 .btn-cv {
   background: transparent;
-  color: #7c6fff;
-  border: 0.5px solid #7c6fff55;
+  color: #29e629;
+  border: 0.5px solid #29e62955;
   padding: 10px 22px;
   border-radius: 6px;
   font-size: 13px;
@@ -150,7 +150,7 @@ h1 span { color: #7c6fff; }
   transition: all 0.2s;
   text-decoration: none;
 }
-.btn-cv:hover { background: #7c6fff18; border-color: #7c6fff; }
+.btn-cv:hover { background: #29e62918; border-color: #29e629; }
 .btn-cv svg { width: 14px; height: 14px; }
 
 /* FOTO */
@@ -164,12 +164,12 @@ h1 span { color: #7c6fff; }
   width: 170px;
   height: 170px;
   border-radius: 50%;
-  border: 2px solid #7c6fff66;
+  border: 2px solid #29e62966;
   padding: 4px;
   cursor: pointer;
   transition: border-color 0.2s;
 }
-.photo-frame:hover { border-color: #7c6fff; }
+.photo-frame:hover { border-color: #29e629; }
 .photo-inner {
   width: 100%;
   height: 100%;
@@ -185,7 +185,7 @@ h1 span { color: #7c6fff; }
 .photo-hint {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  background: #7c6fff99;
+  background: #29e62999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,7 +218,7 @@ h1 span { color: #7c6fff; }
   max-width: 340px;
   max-height: 340px;
   border-radius: 12px;
-  border: 2px solid #7c6fff44;
+  border: 2px solid #29e62944;
   object-fit: cover;
 }
 .lightbox-close {
@@ -233,7 +233,7 @@ h1 span { color: #7c6fff; }
   background: transparent;
   transition: all 0.2s;
 }
-.lightbox-close:hover { color: #e2e2f0; border-color: #7c6fff; }
+.lightbox-close:hover { color: #e2e2f0; border-color: #29e629; }
 .lightbox-name {
   font-size: 14px;
   color: #a0a0c0;
@@ -248,12 +248,13 @@ section { margin-bottom: 4rem; }
   gap: 1rem;
   margin-bottom: 2rem;
 }
+
 .section-header h2 {
   font-family: 'Space Mono', monospace;
   font-size: 12px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #7c6fff;
+  color: #29e629;
   white-space: nowrap;
 }
 .section-header::after {
@@ -300,7 +301,7 @@ section { margin-bottom: 4rem; }
   font-family: 'Space Mono', monospace;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #7c6fff;
+  color: #f0f0ff;
   margin-bottom: 1rem;
 }
 .skill-pills { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -328,19 +329,19 @@ section { margin-bottom: 4rem; }
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #7c6fff, #c084fc);
+  background: linear-gradient(90deg, #29e629, #b7e2b7);
 }
 .project-number {
   font-family: 'Space Mono', monospace;
   font-size: 11px;
-  color: #5a5a7a;
+  color: #87d187;
   letter-spacing: 2px;
   margin-bottom: 0.75rem;
 }
 .project-title { font-size: 18px; font-weight: 600; color: #f0f0ff; margin-bottom: 0.5rem; }
 .project-subtitle {
   font-size: 12px;
-  color: #7c6fff;
+  color: #8ddd8d;
   font-family: 'Space Mono', monospace;
   letter-spacing: 1px;
   margin-bottom: 1rem;
@@ -349,8 +350,8 @@ section { margin-bottom: 4rem; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .tag {
   background: #1a1a2e;
-  border: 0.5px solid #7c6fff44;
-  color: #9d8fff;
+  border: 0.5px solid #29e62944;
+  color: #81e081;
   font-size: 11px;
   padding: 3px 10px;
   border-radius: 4px;
@@ -374,14 +375,17 @@ section { margin-bottom: 4rem; }
   width: 52px;
   height: 52px;
   background: #1a1a2e;
-  border: 0.5px solid #7c6fff44;
+  border: 0.5px solid #05050544;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
-.cv-icon svg { width: 24px; height: 24px; }
+.cv-icon svg {
+  width: 24px; 
+  height: 24px; 
+}
 .cv-title { font-size: 16px; font-weight: 600; color: #f0f0ff; margin-bottom: 4px; }
 .cv-meta { font-size: 12px; color: #5a5a7a; font-family: 'Space Mono', monospace; }
 .cv-status {
@@ -394,7 +398,7 @@ section { margin-bottom: 4rem; }
 .cv-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
 
 .btn-download {
-  background: #7c6fff;
+  background: #29e629;
   color: #fff;
   border: none;
   padding: 11px 24px;
@@ -409,7 +413,7 @@ section { margin-bottom: 4rem; }
   transition: background 0.2s;
 }
 .btn-download:hover { 
-  background: #9a8fff; 
+  background: #97e097; 
 }
 .btn-download svg { 
   width: 15px; 
@@ -422,7 +426,7 @@ section { margin-bottom: 4rem; }
   cursor: pointer;
   transition: color 0.2s;
 }
-.cv-upload-note:hover { color: #7c6fff; }
+.cv-upload-note:hover { color: #29e629; }
 #cvInput { display: none; }
 
 /* CONTACTO */
@@ -449,7 +453,7 @@ section { margin-bottom: 4rem; }
 .contact-icon svg { width: 16px; height: 16px; }
 .contact-label {
   font-size: 11px;
-  color: #5a5a7a;
+  color: #f0f0ff;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 3px;
@@ -466,7 +470,7 @@ footer {
   color: #4a4a6a;
   font-family: 'Changa', monospace;
 }
-footer span { color: #7c6fff; }
+footer span { color: #29e629; }
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
