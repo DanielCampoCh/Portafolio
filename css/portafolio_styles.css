@@ -460,6 +460,8 @@ section { margin-bottom: 4rem; }
   font-family: 'Changa', monospace;
 }
 .contact-value { font-size: 13px; color: #a0a0c0; }
+.contact-link { text-decoration: none; transition: color 0.2s; }
+.contact-link:hover { color: #29e629; }
 
 /* FOOTER */
 footer {
