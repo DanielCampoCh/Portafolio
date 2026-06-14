@@ -4,6 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daniel Campo Chaguendo · Portfolio</title>
+
+  <!-- Meta tags OG para preview en LinkedIn / redes -->
+  <meta name="description" content="Portafolio de Daniel Campo Chaguendo — Tecnólogo en Sistemas, desarrollo de software y soporte técnico. Cali, Colombia." />
+  <meta property="og:title" content="Daniel Campo Chaguendo · Portfolio" />
+  <meta property="og:description" content="Tecnólogo en Sistemas en formación · Desarrollo de software · Soporte técnico · Cali, Colombia." />
+  <meta property="og:image" content="img/logo-perfil.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Daniel Campo Chaguendo · Portfolio" />
+  <meta name="twitter:description" content="Tecnólogo en Sistemas · Desarrollo de software · Cali, Colombia." />
+  <meta name="twitter:image" content="img/logo-perfil.jpg" />
+
+  <!-- Favicon SVG con iniciales DC -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0a0f'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='13' font-weight='bold' fill='%2329e629'>DC</text></svg>" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Changa:wght@200..800&family=Cinzel:wght@400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Luckiest+Guy&family=Staatliches&display=swap" rel="stylesheet">
@@ -152,23 +167,92 @@
     <!-- PROYECTOS -->
     <section id="proyectos">
       <div class="section-header"><h2>Proyectos</h2></div>
-      <div class="project-card">
-        <div class="project-number">01 / PROYECTO DESTACADO</div>
-        <div class="project-title">SISC — Sistema de Información de Seguridad Ciudadana</div>
-        <div class="project-subtitle">Cali · Colombia</div>
-        <p class="project-desc">
-          Sistema de información orientado a la gestión y visualización de datos de seguridad ciudadana
-          para la ciudad de Cali. Desarrollado con arquitectura de escritorio en Java con interfaz gráfica
-          en JavaFX, base de datos MySQL y versión complementaria en entorno web. Permite el registro,
-          consulta y análisis de incidentes para apoyar la toma de decisiones.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Java</span>
-          <span class="tag">JavaFX</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">Web</span>
-          <span class="tag">Full Stack</span>
+
+      <div class="projects-list">
+
+        <!-- SISC -->
+        <div class="project-card">
+          <div class="project-number">01 / PROYECTO ACADÉMICO</div>
+          <div class="project-title">SISC — Sistema de Información de Seguridad Ciudadana</div>
+          <div class="project-subtitle">Cali · Colombia · Proyecto Integrador 5° Semestre</div>
+          <p class="project-desc">
+            Plataforma web para la gestión y visualización de datos de seguridad ciudadana en Cali.
+            Incluye mapa interactivo con geolocalización de incidentes, sistema de comentarios,
+            registro y consulta de eventos por zona. Desarrollado con Laravel en el backend,
+            PHP, y base de datos MySQL administrada con XAMPP.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Laravel</span>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">XAMPP</span>
+            <span class="tag">Mapa interactivo</span>
+            <span class="tag">Full Stack</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/SAbadia12/ProyectoIntegrador5toSemestre" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+              </svg>
+              Ver en GitHub
+            </a>
+          </div>
         </div>
+
+        <!-- SISC v1 -->
+        <div class="project-card">
+          <div class="project-number">02 / PROYECTO ACADÉMICO</div>
+          <div class="project-title">SISC v1 — Sistema de Información de Seguridad Ciudadana</div>
+          <div class="project-subtitle">Cali · Colombia · Proyecto Integrador 4° Semestre</div>
+          <p class="project-desc">
+            Primera versión del SISC, desarrollada como aplicación de escritorio en Java con interfaz
+            gráfica en JavaFX y base de datos MySQL. Permite el registro, consulta y análisis de
+            incidentes de seguridad ciudadana. Base del proyecto que evolucionó a plataforma web
+            completa en el semestre siguiente.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">JavaFX</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Desktop</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/DanielCampoCh/PROYECTO-INTEGRADOR" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+              </svg>
+              Ver en GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- GLPI -->
+        <div class="project-card">
+          <div class="project-number">03 / PROYECTO PROFESIONAL</div>
+          <div class="project-title">GLPI — Sistema de Gestión IT · Spectra Ingeniería</div>
+          <div class="project-subtitle">Cali · Colombia · Entorno Empresarial Real</div>
+          <p class="project-desc">
+            Configuración e implementación completa de GLPI (sistema ITSM open-source) en entorno
+            empresarial para Spectra Ingeniería. Desplegado en máquina virtual Ubuntu Server,
+            integrado con Active Directory para autenticación de usuarios. Gestiona inventario de
+            más de 59 computadores, 3.300+ programas, 42 monitores, 38 teléfonos y 16 impresoras.
+            Incluye mesa de ayuda con más de 25 categorías de tickets (VPN, soporte Microsoft 365,
+            control de acceso biométrico, gestión de periféricos y más).
+          </p>
+          <div class="project-tags">
+            <span class="tag">GLPI</span>
+            <span class="tag">Ubuntu Server</span>
+            <span class="tag">Active Directory</span>
+            <span class="tag">ITSM</span>
+            <span class="tag">Inventario IT</span>
+            <span class="tag">Help Desk</span>
+            <span class="tag">Virtualización</span>
+          </div>
+          <div class="project-links">
+            <span class="project-badge">Desplegado en producción</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -256,6 +340,31 @@
           </div>
         </div>
       </div>
+
+      <!-- FORMULARIO DE CONTACTO -->
+      <form class="contact-form" action="https://formspree.io/f/xeoqkdgv" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame sobre la oportunidad..." required></textarea>
+        </div>
+        <button type="submit" class="btn-send">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/>
+          </svg>
+          Enviar mensaje
+        </button>
+        <p class="form-note" id="formNote"></p>
+      </form>
     </section>
 
     <footer>
