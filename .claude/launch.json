@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portafolio",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:\\Users\\Daniel\\AppData\\Local\\Temp\\claude\\C--Users-Daniel-Desktop-Porfalio-Portafolio\\a1a4cfd5-4c5b-4e54-b945-b1ae623b4db9\\scratchpad\\serve.ps1", "-Root", "C:\\Users\\Daniel\\Desktop\\Porfalio\\Portafolio"],
+      "port": 5500
+    }
+  ]
+}

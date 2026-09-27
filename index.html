@@ -3,374 +3,491 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel Campo Chaguendo · Portfolio</title>
+  <title>Daniel Campo Chaguendo · Desarrollador Web</title>
+  <meta name="description" content="Portafolio de Daniel Campo Chaguendo — Desarrollador web y soporte IT en Cali, Colombia. Laravel, PHP, JavaScript, Java y bases de datos. En busca de nuevos desafíos." />
+  <meta name="theme-color" content="#060807" />
+  <link rel="canonical" href="https://danielcampoch.github.io/Portafolio/" />
 
-  <!-- Meta tags OG para preview en LinkedIn / redes -->
-  <meta name="description" content="Portafolio de Daniel Campo Chaguendo — Tecnólogo en Sistemas, desarrollo de software y soporte técnico. Cali, Colombia." />
-  <meta property="og:title" content="Daniel Campo Chaguendo · Portfolio" />
-  <meta property="og:description" content="Tecnólogo en Sistemas en formación · Desarrollo de software · Soporte técnico · Cali, Colombia." />
-  <meta property="og:image" content="img/logo-perfil.jpg" />
+  <meta property="og:title" content="Daniel Campo Chaguendo · Desarrollador Web" />
+  <meta property="og:description" content="Desarrollo web · Soporte IT · Cali, Colombia. En busca de nuevos desafíos como desarrollador." />
+  <meta property="og:image" content="https://danielcampoch.github.io/Portafolio/img/perfil.jpg" />
+  <meta property="og:url" content="https://danielcampoch.github.io/Portafolio/" />
   <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Daniel Campo Chaguendo · Portfolio" />
-  <meta name="twitter:description" content="Tecnólogo en Sistemas · Desarrollo de software · Cali, Colombia." />
-  <meta name="twitter:image" content="img/logo-perfil.jpg" />
+  <meta property="og:locale" content="es_CO" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Daniel Campo Chaguendo · Desarrollador Web" />
+  <meta name="twitter:description" content="Desarrollo web · Soporte IT · Cali, Colombia." />
+  <meta name="twitter:image" content="https://danielcampoch.github.io/Portafolio/img/perfil.jpg" />
 
-  <!-- Favicon SVG con iniciales DC -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0a0f'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='13' font-weight='bold' fill='%2329e629'>DC</text></svg>" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23060807'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='13' font-weight='bold' fill='%2339e639'>DC</text></svg>" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Changa:wght@200..800&family=Cinzel:wght@400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Luckiest+Guy&family=Staatliches&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/portafolio_styles.css">
 </head>
 <body>
 
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <!--
-      FOTO AMPLIADA — cambia este src por la ruta de tu foto, ej: src="foto.jpg"
-    -->
-    <img
-      src="img/logo-perfil.jpg"
-      id="lightboxImg"
-      alt="Daniel Campo Chaguendo"
-    />
+  <!-- Iconos reutilizables -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11M7 10l5 5 5-5M4 20h16"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m5 12 5 5 9-10"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z"/></symbol>
+  </svg>
 
-    <div class="lightbox-name">Daniel Campo Chaguendo</div>
-    <button class="lightbox-close" onclick="closeLightbox()">CERRAR</button>
-  </div>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <div class="portfolio-root">
+  <!-- NAVEGACIÓN -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container" aria-label="Principal">
+      <a class="brand" href="#inicio" aria-label="Inicio">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span class="brand-name">DANIEL<b>CAMPO</b></span>
+      </a>
 
-    <nav>
-      <div class="nav-logo">DC · Portfolio</div>
-      <ul class="nav-links">
-        <li><a href="#sobre">Sobre mí</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#cv-section">CV</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre">Sobre mí</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a class="btn btn-ghost btn-sm nav-cta" href="#contacto">Hablemos</a>
+      </div>
     </nav>
+  </header>
+
+  <main id="contenido">
 
     <!-- HERO -->
-    <div class="hero">
-      <div class="hero-inner">
+    <section class="hero" id="inicio">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
         <div class="hero-text">
-          <div class="hero-tag">Disponible para oportunidades</div>
-          <h1>Daniel<br>Campo <span>Chaguendo</span></h1>
+          <span class="chip"><span class="chip-dot"></span>Desarrollador web · Soporte IT</span>
+          <h1 class="hero-title">Creo soluciones web <span class="accent">que funcionan</span></h1>
           <p class="hero-desc">
-            Tecnólogo en Sistemas en formación · Soporte técnico · Desarrollo de software · Cali, Colombia
+            Tecnólogo en Sistemas en formación. Desarrollo aplicaciones web con Laravel, PHP y JavaScript,
+            e implemento infraestructura IT en entornos empresariales reales.
+            <strong>Estoy en busca de nuevos desafíos como desarrollador.</strong>
           </p>
           <div class="hero-cta">
-            <a class="btn-primary" href="#proyectos">Ver proyectos</a>
-            <a class="btn-cv" href="#cv-section">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M12 16v-8M8 12l4 4 4-4"/><path d="M4 20h16"/>
-              </svg>
-              Descargar CV
-            </a>
-            <a class="btn-outline" href="#contacto">Contactarme</a>
+            <a class="btn btn-primary" href="#proyectos">Ver mis proyectos <svg><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost" href="document/Hoja-de-Vida-Daniel-Campo.pdf" download>Descargar CV <svg><use href="#i-download"/></svg></a>
+          </div>
+          <div class="hero-social">
+            <span>Encuéntrame en</span>
+            <a href="https://github.com/DanielCampoCh" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
+            <a href="https://www.linkedin.com/in/daniel-campo-chaguendo-a43bb02b4" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
+            <a href="mailto:dchcampo@gmail.com" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
           </div>
         </div>
 
-        <!--
-          FOTO DE PERFIL — Para usar tu foto real:
-          1. Guarda tu foto en la misma carpeta que este archivo, ej: "mi-foto.jpg"
-          2. Cambia el src de abajo: src="mi-foto.jpg"
-          3. Haz lo mismo en el lightbox de arriba
-        -->
-        <div class="hero-photo-wrap">
-          <div class="photo-frame" onclick="openLightbox()">
-            <div class="photo-inner">
-              <img
-                src="img/logo-perfil.jpg"
-                alt="Daniel Campo Chaguendo"
-              />
-              <div class="photo-hint"><span>VER FOTO</span></div>
-            </div>
+        <div class="hero-visual">
+          <div class="orbit orbit-1" aria-hidden="true"></div>
+          <div class="orbit orbit-2" aria-hidden="true"></div>
+          <button class="photo" id="photoBtn" aria-label="Ver foto ampliada">
+            <img src="img/perfil.jpg" alt="Daniel Campo Chaguendo" width="640" height="640" />
+          </button>
+
+          <div class="float-card fc-status">
+            <div class="fc-label">Estado</div>
+            <div class="fc-row"><span class="pulse"></span>Disponible · nuevos desafíos</div>
           </div>
+
+          <div class="float-card fc-code" aria-hidden="true">
+            <div class="fc-label">daniel.js</div>
+<pre><code><span class="k">const</span> daniel = {
+  rol: <span class="s">'Desarrollador'</span>,
+  stack: [<span class="s">'Laravel'</span>, <span class="s">'JS'</span>, <span class="s">'Java'</span>],
+  ciudad: <span class="s">'Cali'</span>,
+  busca: <span class="s">'nuevos retos'</span>
+};</code></pre>
+          </div>
+
+          <a class="float-card fc-project" href="https://bosques-chipichape.netlify.app/" target="_blank" rel="noopener">
+            <div class="fc-label">Último proyecto</div>
+            <div class="fc-row"><span class="pulse"></span>Bosques de Chipichape <svg><use href="#i-external"/></svg></div>
+          </a>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- CIFRAS -->
+    <section class="stats container" aria-label="Cifras">
+      <div class="stat"><div class="stat-num" data-count="4">0</div><div class="stat-label">Proyectos<br>construidos</div></div>
+      <div class="stat"><div class="stat-num" data-count="59" data-suffix="+">0</div><div class="stat-label">Equipos gestionados<br>en producción</div></div>
+      <div class="stat"><div class="stat-num" data-count="3300" data-suffix="+">0</div><div class="stat-label">Programas<br>inventariados</div></div>
+      <div class="stat"><div class="stat-num" data-count="25" data-suffix="+">0</div><div class="stat-label">Categorías de<br>soporte creadas</div></div>
+      <div class="stat"><div class="stat-num" data-count="10" data-suffix="+">0</div><div class="stat-label">Tecnologías<br>que uso</div></div>
+    </section>
 
     <!-- SOBRE MÍ -->
-    <section id="sobre">
-      <div class="section-header"><h2>Sobre mí</h2></div>
-      <p class="about-text">
-        Estudiante de Tecnología en Sistemas con experiencia en soporte técnico, configuración de equipos
-        y administración básica de sistemas. Interesado en el desarrollo de software y en la comprensión
-        de arquitecturas tecnológicas que permitan crear soluciones eficientes. Actualmente fortaleciendo
-        habilidades en programación y desarrollo web, con capacidad de aprendizaje continuo, análisis de
-        problemas y adaptación a nuevas tecnologías.
-      </p>
-      <div class="about-grid">
-        <div class="info-card">
-          <div class="info-card-label">Ubicación</div>
-          <div class="info-card-value">Cali, Colombia</div>
+    <section class="section container" id="sobre">
+      <div class="about">
+        <div class="about-art" aria-hidden="true">
+          <div class="cube">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
         </div>
-        <div class="info-card">
-          <div class="info-card-label">Estado</div>
-          <div class="info-card-value">Estudiante activo</div>
+
+        <div class="about-text">
+          <p class="eyebrow">Sobre mí</p>
+          <h2 class="section-title">Construyo soluciones digitales que aportan valor</h2>
+          <p>
+            Soy estudiante de Tecnología en Sistemas en Cali. He trabajado en los dos lados de la tecnología:
+            <strong>desarrollando software</strong> (aplicaciones web y de escritorio) y
+            <strong>dando soporte e infraestructura IT</strong> en una empresa real, donde implementé
+            el sistema de gestión GLPI que hoy usa todo el equipo.
+          </p>
+          <ul class="check-list">
+            <li><svg><use href="#i-check"/></svg>Me gusta resolver problemas reales con código limpio</li>
+            <li><svg><use href="#i-check"/></svg>Experiencia con Laravel, PHP, JavaScript y Java</li>
+            <li><svg><use href="#i-check"/></svg>Aprendo rápido y me adapto a nuevas tecnologías</li>
+          </ul>
+          <a class="btn btn-ghost btn-sm" href="document/Hoja-de-Vida-Daniel-Campo.pdf" download>Ver hoja de vida <svg><use href="#i-download"/></svg></a>
         </div>
-        <div class="info-card">
-          <div class="info-card-label">Programa</div>
-          <div class="info-card-value">Tecnología en Sistemas</div>
+
+        <aside class="panel about-info">
+          <dl>
+            <div><dt>Nombre</dt><dd>Daniel Campo Chaguendo</dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:dchcampo@gmail.com">dchcampo@gmail.com</a></dd></div>
+            <div><dt>Ubicación</dt><dd>Cali, Colombia</dd></div>
+            <div><dt>Estudios</dt><dd>Tecnología en Sistemas</dd></div>
+            <div><dt>Disponible para</dt><dd>Empleo · Prácticas · Freelance</dd></div>
+          </dl>
+          <div class="seeking">
+            <span class="pulse"></span>
+            <div>
+              <strong>En busca de nuevos desafíos</strong>
+              <span>como desarrollador</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section class="section container" id="experiencia">
+      <p class="eyebrow">Experiencia</p>
+      <h2 class="section-title">Trabajo en un entorno real</h2>
+
+      <article class="panel exp-card">
+        <div class="exp-head">
+          <div class="exp-logo" aria-hidden="true">SI</div>
+          <div>
+            <h3>Implementación de GLPI · Soporte IT</h3>
+            <p class="exp-company">Spectra Ingeniería · Cali, Colombia</p>
+          </div>
+          <span class="badge badge-live"><span class="pulse"></span>En producción</span>
         </div>
-        <div class="info-card">
-          <div class="info-card-label">Enfoque</div>
-          <div class="info-card-value">Desarrollo de software</div>
+        <p class="exp-desc">
+          Configuré e implementé desde cero GLPI, un sistema de gestión de servicios IT (ITSM) de código abierto.
+          Lo desplegué en una máquina virtual con Ubuntu Server y lo integré con Active Directory para que los
+          empleados inicien sesión con su usuario de la empresa.
+        </p>
+        <div class="exp-metrics">
+          <div><b>59+</b><span>computadores</span></div>
+          <div><b>3.300+</b><span>programas</span></div>
+          <div><b>42</b><span>monitores</span></div>
+          <div><b>38</b><span>teléfonos</span></div>
+          <div><b>16</b><span>impresoras</span></div>
+          <div><b>25+</b><span>categorías de tickets</span></div>
+        </div>
+        <ul class="exp-list">
+          <li>Mesa de ayuda con categorías para VPN, Microsoft 365, control de acceso biométrico y periféricos.</li>
+          <li>Inventario completo de hardware y software de la empresa.</li>
+          <li>Soporte técnico de hardware, software y configuración de redes.</li>
+        </ul>
+        <div class="tags">
+          <span>GLPI</span><span>Ubuntu Server</span><span>Active Directory</span><span>Virtualización</span><span>ITSM</span><span>Help Desk</span><span>Redes</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section container" id="servicios">
+      <p class="eyebrow">Servicios</p>
+      <h2 class="section-title">¿En qué te puedo ayudar?</h2>
+      <div class="services">
+        <div class="panel service">
+          <svg class="service-icon" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg>
+          <h3>Desarrollo web</h3>
+          <p>Sitios y aplicaciones web completas, desde la idea hasta publicarlas en internet.</p>
+        </div>
+        <div class="panel service">
+          <svg class="service-icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          <h3>Frontend</h3>
+          <p>Interfaces claras y responsivas con HTML, CSS y JavaScript que se ven bien en el celular.</p>
+        </div>
+        <div class="panel service">
+          <svg class="service-icon" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="6" rx="1.5"/><rect x="4" y="15" width="16" height="6" rx="1.5"/><path d="M8 6h.01M8 18h.01M12 9v6"/></svg>
+          <h3>Backend</h3>
+          <p>Lógica del servidor, autenticación y APIs con Laravel y PHP.</p>
+        </div>
+        <div class="panel service">
+          <svg class="service-icon" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7" ry="2.5"/><path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></svg>
+          <h3>Bases de datos</h3>
+          <p>Diseño y consultas en MySQL y PostgreSQL para guardar la información de forma ordenada.</p>
+        </div>
+        <div class="panel service">
+          <svg class="service-icon" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5Z"/></svg>
+          <h3>Soporte IT</h3>
+          <p>Soporte de hardware y software, configuración de equipos y redes.</p>
+        </div>
+        <div class="panel service">
+          <svg class="service-icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="18" cy="17" r="2.5"/></svg>
+          <h3>Gestión IT (ITSM)</h3>
+          <p>Implementación de GLPI: inventario, mesa de ayuda y control de activos.</p>
         </div>
       </div>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills">
-      <div class="section-header"><h2>Habilidades técnicas</h2></div>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <div class="skill-group-title">Lenguajes</div>
-          <div class="skill-pills">
-            <span class="pill">Java</span>
-            <span class="pill">HTML</span>
-            <span class="pill">CSS</span>
-            <span class="pill">JavaScript</span>
+    <section class="section container" id="skills">
+      <p class="eyebrow">Skills</p>
+      <h2 class="section-title">Tecnologías con las que trabajo</h2>
+
+      <div class="panel skills">
+        <div class="skills-tabs" role="tablist" aria-label="Categorías de tecnologías">
+          <button role="tab" aria-selected="true" aria-controls="tab-front" id="t-front">Frontend</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-back" id="t-back" tabindex="-1">Backend</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-db" id="t-db" tabindex="-1">Bases de datos</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-tools" id="t-tools" tabindex="-1">Infra y herramientas</button>
+        </div>
+
+        <div class="skills-panels">
+          <div class="tiles" role="tabpanel" id="tab-front" aria-labelledby="t-front">
+            <div class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" loading="lazy">HTML5</div>
+            <div class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" loading="lazy">CSS3</div>
+            <div class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" loading="lazy">JavaScript</div>
+            <div class="tile"><span class="tile-mono">RWD</span>Responsive</div>
+          </div>
+          <div class="tiles" role="tabpanel" id="tab-back" aria-labelledby="t-back" hidden>
+            <div class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="" loading="lazy">PHP</div>
+            <div class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="" loading="lazy">Laravel</div>
+            <div class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="" loading="lazy">Java</div>
+            <div class="tile"><span class="tile-mono">FX</span>JavaFX</div>
+            <div class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" alt="" loading="lazy">Apps Script</div>
+          </div>
+          <div class="tiles" role="tabpanel" id="tab-db" aria-labelledby="t-db" hidden>
+            <div class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" loading="lazy">MySQL</div>
+            <div class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="" loading="lazy">PostgreSQL</div>
+            <div class="tile"><span class="tile-mono">GS</span>Google Sheets</div>
+          </div>
+          <div class="tiles" role="tabpanel" id="tab-tools" aria-labelledby="t-tools" hidden>
+            <div class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" loading="lazy">Git</div>
+            <div class="tile"><img class="invert" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" loading="lazy">GitHub</div>
+            <div class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg" alt="" loading="lazy">Ubuntu Server</div>
+            <div class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg" alt="" loading="lazy">Netlify</div>
+            <div class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="" loading="lazy">VS Code</div>
+            <div class="tile"><span class="tile-mono">AD</span>Active Directory</div>
+            <div class="tile"><span class="tile-mono">IT</span>GLPI</div>
           </div>
         </div>
-        <div class="skill-group">
-          <div class="skill-group-title">Bases de datos</div>
-          <div class="skill-pills">
-            <span class="pill">MySQL</span>
-            <span class="pill">PostgreSQL</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-title">Herramientas</div>
-          <div class="skill-pills">
-            <span class="pill">JavaFX</span>
-            <span class="pill">Soporte técnico</span>
-            <span class="pill">Config. redes</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-title">Soft skills</div>
-          <div class="skill-pills">
-            <span class="pill">Aprendizaje continuo</span>
-            <span class="pill">Análisis</span>
-            <span class="pill">Adaptabilidad</span>
-          </div>
+
+        <div class="skills-ring" aria-hidden="true">
+          <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+          <span>&lt;/&gt;</span>
         </div>
       </div>
     </section>
 
     <!-- PROYECTOS -->
-    <section id="proyectos">
-      <div class="section-header"><h2>Proyectos</h2></div>
-
-      <div class="projects-list">
-
-        <!-- SISC -->
-        <div class="project-card">
-          <div class="project-number">01 / PROYECTO ACADÉMICO</div>
-          <div class="project-title">SISC — Sistema de Información de Seguridad Ciudadana</div>
-          <div class="project-subtitle">Cali · Colombia · Proyecto Integrador 5° Semestre</div>
-          <p class="project-desc">
-            Plataforma web para la gestión y visualización de datos de seguridad ciudadana en Cali.
-            Incluye mapa interactivo con geolocalización de incidentes, sistema de comentarios,
-            registro y consulta de eventos por zona. Desarrollado con Laravel en el backend,
-            PHP, y base de datos MySQL administrada con XAMPP.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Laravel</span>
-            <span class="tag">PHP</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">XAMPP</span>
-            <span class="tag">Mapa interactivo</span>
-            <span class="tag">Full Stack</span>
-          </div>
-          <div class="project-links">
-            <a class="project-link" href="https://github.com/SAbadia12/ProyectoIntegrador5toSemestre" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
-              </svg>
-              Ver en GitHub
-            </a>
-          </div>
+    <section class="section container" id="proyectos">
+      <div class="section-head-row">
+        <div>
+          <p class="eyebrow">Proyectos</p>
+          <h2 class="section-title">Cosas que he construido</h2>
         </div>
-
-        <!-- SISC v1 -->
-        <div class="project-card">
-          <div class="project-number">02 / PROYECTO ACADÉMICO</div>
-          <div class="project-title">SISC v1 — Sistema de Información de Seguridad Ciudadana</div>
-          <div class="project-subtitle">Cali · Colombia · Proyecto Integrador 4° Semestre</div>
-          <p class="project-desc">
-            Primera versión del SISC, desarrollada como aplicación de escritorio en Java con interfaz
-            gráfica en JavaFX y base de datos MySQL. Permite el registro, consulta y análisis de
-            incidentes de seguridad ciudadana. Base del proyecto que evolucionó a plataforma web
-            completa en el semestre siguiente.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Java</span>
-            <span class="tag">JavaFX</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">Desktop</span>
-          </div>
-          <div class="project-links">
-            <a class="project-link" href="https://github.com/DanielCampoCh/PROYECTO-INTEGRADOR" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
-              </svg>
-              Ver en GitHub
-            </a>
-          </div>
-        </div>
-
-        <!-- GLPI -->
-        <div class="project-card">
-          <div class="project-number">03 / PROYECTO PROFESIONAL</div>
-          <div class="project-title">GLPI — Sistema de Gestión IT · Spectra Ingeniería</div>
-          <div class="project-subtitle">Cali · Colombia · Entorno Empresarial Real</div>
-          <p class="project-desc">
-            Configuración e implementación completa de GLPI (sistema ITSM open-source) en entorno
-            empresarial para Spectra Ingeniería. Desplegado en máquina virtual Ubuntu Server,
-            integrado con Active Directory para autenticación de usuarios. Gestiona inventario de
-            más de 59 computadores, 3.300+ programas, 42 monitores, 38 teléfonos y 16 impresoras.
-            Incluye mesa de ayuda con más de 25 categorías de tickets (VPN, soporte Microsoft 365,
-            control de acceso biométrico, gestión de periféricos y más).
-          </p>
-          <div class="project-tags">
-            <span class="tag">GLPI</span>
-            <span class="tag">Ubuntu Server</span>
-            <span class="tag">Active Directory</span>
-            <span class="tag">ITSM</span>
-            <span class="tag">Inventario IT</span>
-            <span class="tag">Help Desk</span>
-            <span class="tag">Virtualización</span>
-          </div>
-          <div class="project-links">
-            <span class="project-badge">Desplegado en producción</span>
-          </div>
-        </div>
-
+        <a class="link-arrow" href="https://github.com/DanielCampoCh" target="_blank" rel="noopener">Ver todo en GitHub <svg><use href="#i-arrow"/></svg></a>
       </div>
-    </section>
 
-    <!-- CV -->
-    <section id="cv-section">
-      <div class="section-header"><h2>Currículum</h2></div>
-      <div class="cv-card">
-        <div class="cv-info">
-          <div class="cv-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#29e629" stroke-width="1.5">
-              <path d="M9 12h6M9 16h6M9 8h3M5 4h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1z"/>
-            </svg>
+      <div class="projects">
+
+        <article class="panel project project-featured">
+          <div class="thumb thumb-bosques" aria-hidden="true">
+            <div class="tb-leaf l1"></div><div class="tb-leaf l2"></div>
+            <div class="tb-content">
+              <small>— Conjunto Residencial</small>
+              <strong>Bosques de<br>Chipichape</strong>
+              <div class="tb-search"><i></i><i></i><i></i></div>
+            </div>
           </div>
-          <div>
-            <div class="cv-title">Daniel Campo Chaguendo</div>
-            <div class="cv-meta" id="cvMeta">CV_DanielCampo.pdf · Listo para descargar</div>
-            <div class="cv-status" id="cvStatus">CV cargado correctamente</div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-kind">Proyecto real · En línea</span>
+              <span class="badge badge-live"><span class="pulse"></span>Live</span>
+            </div>
+            <h3>Bosques de Chipichape</h3>
+            <p>
+              Directorio web de emprendimientos y empresas de los residentes de un conjunto residencial en Cali.
+              Los vecinos se registran con un formulario y cualquiera puede buscarlos por nombre, producto,
+              categoría o tipo, y contactarlos directo por WhatsApp. Los datos se guardan en Google Sheets
+              a través de una API hecha con Google Apps Script.
+            </p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Google Apps Script</span><span>Google Sheets</span><span>Netlify</span></div>
+            <div class="project-links">
+              <a class="btn btn-primary btn-sm" href="https://bosques-chipichape.netlify.app/" target="_blank" rel="noopener">Ver sitio en vivo <svg><use href="#i-external"/></svg></a>
+            </div>
           </div>
-        </div>
-        <div class="cv-actions">
-          <button class="btn-download" onclick="downloadCV()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 16v-8M8 12l4 4 4-4"/><rect x="3" y="18" width="18" height="2" rx="1"/>
-            </svg>
-            Descargar CV
-          </button>
-          <span class="cv-upload-note" onclick="document.getElementById('cvInput').click()">
-          </span>
-          <input type="file" id="cvInput" accept=".pdf" />
-        </div>
+        </article>
+
+        <article class="panel project">
+          <div class="thumb thumb-map" aria-hidden="true">
+            <i class="pin p1"></i><i class="pin p2"></i><i class="pin p3"></i><i class="pin p4"></i>
+            <span class="thumb-label">SISC · Mapa</span>
+          </div>
+          <div class="project-body">
+            <span class="project-kind">Académico · 5° semestre</span>
+            <h3>SISC v2 · Seguridad ciudadana</h3>
+            <p>
+              Plataforma web para registrar y consultar incidentes de seguridad en Cali, con mapa interactivo
+              de incidentes por zona y sistema de comentarios.
+            </p>
+            <div class="tags"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>Mapa interactivo</span></div>
+            <div class="project-links">
+              <a class="link-arrow" href="https://github.com/SAbadia12/ProyectoIntegrador5toSemestre" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Código</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel project">
+          <div class="thumb thumb-desktop" aria-hidden="true">
+            <div class="win"><div class="win-bar"><i></i><i></i><i></i></div><div class="win-rows"><i></i><i></i><i></i><i></i></div></div>
+          </div>
+          <div class="project-body">
+            <span class="project-kind">Académico · 4° semestre</span>
+            <h3>SISC v1 · App de escritorio</h3>
+            <p>
+              Primera versión del SISC: aplicación de escritorio para registrar, consultar y analizar incidentes.
+              Fue la base que luego convertimos en plataforma web.
+            </p>
+            <div class="tags"><span>Java</span><span>JavaFX</span><span>MySQL</span></div>
+            <div class="project-links">
+              <a class="link-arrow" href="https://github.com/DanielCampoCh/PROYECTO-INTEGRADOR" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Código</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel project">
+          <div class="thumb thumb-code" aria-hidden="true">
+            <code><span class="k">&lt;section</span> <span class="s">id="proyectos"</span><span class="k">&gt;</span><br>&nbsp;&nbsp;…<br><span class="k">&lt;/section&gt;</span></code>
+          </div>
+          <div class="project-body">
+            <span class="project-kind">Personal</span>
+            <h3>Este portafolio</h3>
+            <p>
+              Sitio personal hecho desde cero, sin frameworks. Diseño responsivo, animaciones
+              accesibles y formulario de contacto funcional.
+            </p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+            <div class="project-links">
+              <a class="link-arrow" href="https://github.com/DanielCampoCh/Portafolio" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg> Código</a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto">
-      <div class="section-header"><h2>Contacto</h2></div>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#29e629" stroke-width="1.5">
-              <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-label">Email</div>
-            <!-- Reemplaza con tu email real -->
-            <a class="contact-value contact-link" href="mailto:dchcampo@gmail.com">dchcampo@gmail.com</a>
-          </div>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#29e629" stroke-width="1.5">
-              <path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-              <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-label">Ubicación</div>
-            <div class="contact-value">Cali, Valle del Cauca</div>
+    <section class="section container" id="contacto">
+      <div class="panel contact">
+        <div class="contact-info">
+          <p class="eyebrow">Trabajemos juntos</p>
+          <h2 class="section-title">Hablemos</h2>
+          <p>
+            Estoy en busca de <strong>nuevos desafíos como desarrollador</strong> y de oportunidades
+            para seguir creciendo. Si tienes una vacante, una práctica o un proyecto, escríbeme.
+          </p>
+          <div class="contact-cards">
+            <a class="mini-card" href="mailto:dchcampo@gmail.com"><svg><use href="#i-mail"/></svg><div><small>Email</small>dchcampo@gmail.com</div></a>
+            <a class="mini-card" href="https://www.linkedin.com/in/daniel-campo-chaguendo-a43bb02b4" target="_blank" rel="noopener"><svg><use href="#i-linkedin"/></svg><div><small>LinkedIn</small>Daniel Campo</div></a>
+            <div class="mini-card"><svg><use href="#i-pin"/></svg><div><small>Ubicación</small>Cali, Colombia</div></div>
+            <div class="mini-card"><svg><use href="#i-clock"/></svg><div><small>Disponibilidad</small>Abierto a oportunidades</div></div>
           </div>
         </div>
-        <div class="contact-card">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#29e629" stroke-width="1.5">
-              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
-              <circle cx="4" cy="4" r="2"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-label">LinkedIn</div>
-            <!-- Reemplaza con tu usuario real de LinkedIn -->
-            <a class="contact-value contact-link" href="https://www.linkedin.com/in/daniel-campo-chaguendo-a43bb02b4" target="_blank" rel="noopener">www.linkedin.com/in/daniel-campo-chaguendo-a43bb02b4</a>
-          </div>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#29e629" stroke-width="1.5">
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-label">GitHub</div>
-            <!-- Reemplaza con tu usuario real de GitHub -->
-            <a class="contact-value contact-link" href="https://github.com/DanielCampoCh" target="_blank" rel="noopener">https://github.com/DanielCampoCh</a>
-          </div>
-        </div>
-      </div>
 
-      <!-- FORMULARIO DE CONTACTO -->
-      <form class="contact-form" action="https://formspree.io/f/mrevrdbe" method="POST">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+        <form class="contact-form" action="https://formspree.io/f/mrevrdbe" method="POST">
+          <div class="form-row">
+            <label>Nombre<input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required></label>
+            <label>Email<input type="email" name="email" placeholder="tu@email.com" autocomplete="email" required></label>
           </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="tu@email.com" required />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame sobre la oportunidad..." required></textarea>
-        </div>
-        <button type="submit" class="btn-send">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/>
-          </svg>
-          Enviar mensaje
-        </button>
-        <p class="form-note" id="formNote"></p>
-      </form>
+          <label>Asunto<input type="text" name="asunto" placeholder="Vacante, práctica, proyecto…"></label>
+          <label>Mensaje<textarea name="mensaje" rows="5" placeholder="Cuéntame sobre la oportunidad…" required></textarea></label>
+          <button type="submit" class="btn btn-primary btn-send">Enviar mensaje <svg><use href="#i-send"/></svg></button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
 
-    <footer>
-      Diseñado y construido por <span>Daniel Campo Chaguendo</span> · 2026
-    </footer>
+  </main>
 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#inicio"><span class="brand-mark">&lt;/&gt;</span><span class="brand-name">DANIEL<b>CAMPO</b></span></a>
+        <p>Construyendo soluciones, una línea de código a la vez.</p>
+        <div class="footer-social">
+          <a href="https://github.com/DanielCampoCh" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
+          <a href="https://www.linkedin.com/in/daniel-campo-chaguendo-a43bb02b4" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
+          <a href="mailto:dchcampo@gmail.com" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#sobre">Sobre mí</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Proyectos</h4>
+        <ul>
+          <li><a href="https://bosques-chipichape.netlify.app/" target="_blank" rel="noopener">Bosques de Chipichape</a></li>
+          <li><a href="https://github.com/SAbadia12/ProyectoIntegrador5toSemestre" target="_blank" rel="noopener">SISC v2</a></li>
+          <li><a href="https://github.com/DanielCampoCh/PROYECTO-INTEGRADOR" target="_blank" rel="noopener">SISC v1</a></li>
+          <li><a href="document/Hoja-de-Vida-Daniel-Campo.pdf" download>Hoja de vida (PDF)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Stack</h4>
+        <ul class="footer-stack">
+          <li>Laravel · PHP</li>
+          <li>JavaScript</li>
+          <li>Java · JavaFX</li>
+          <li>MySQL · PostgreSQL</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year">2026</span> Daniel Campo Chaguendo</span>
+      <span>Diseñado y construido por Daniel Campo</span>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto de perfil" hidden>
+    <img src="img/perfil.jpg" alt="Daniel Campo Chaguendo" />
+    <p class="lightbox-name">Daniel Campo Chaguendo</p>
+    <button class="btn btn-ghost btn-sm" id="lightboxClose">Cerrar</button>
   </div>
 
   <script src="js/portafolio_scripts.js"></script>

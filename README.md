@@ -47,6 +47,7 @@ Disponible para **prácticas**, **oportunidades laborales** y **proyectos freela
 
 | Proyecto | Descripción | Stack |
 |---|---|---|
+| [Bosques de Chipichape](https://bosques-chipichape.netlify.app/) | Directorio de emprendimientos de un conjunto residencial · En línea | HTML · CSS · JavaScript · Google Apps Script |
 | [SISC v2](https://github.com/SAbadia12/ProyectoIntegrador5toSemestre) | Sistema de seguridad ciudadana con mapa interactivo · Web | Laravel · PHP · MySQL |
 | [SISC v1](https://github.com/DanielCampoCh/PROYECTO-INTEGRADOR) | Primera versión desktop del SISC · 4° semestre | Java · JavaFX · MySQL |
 | [Portfolio](https://github.com/DanielCampoCh/Portafolio) | Este portafolio personal | HTML · CSS · JavaScript |
