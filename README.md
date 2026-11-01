@@ -2,9 +2,9 @@
 
 # Hola, soy Daniel Campo Chaguendo 👋
 
-**Tecnólogo en Sistemas · Cali, Colombia**
+**Analista de TI · Cali, Colombia**
 
-*Desarrollo de software · Soporte IT · Siempre aprendiendo*
+*Infraestructura TI · Microsoft 365 · Redes · CCTV y control de acceso · Desarrollo web*
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-29e629?style=for-the-badge&logo=google-chrome&logoColor=white)](https://danielcampoch.github.io/Portafolio/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/daniel-campo-chaguendo-a43bb02b4)
@@ -16,9 +16,9 @@
 
 ## Sobre mí
 
-Estudiante de Tecnología en Sistemas con experiencia en soporte técnico, configuración de infraestructura IT y desarrollo de software. Me encuentro explorando distintas áreas — backend, frontend y administración de sistemas — para encontrar donde puedo aportar más valor.
+Analista de TI con 3 años de experiencia en infraestructura, soporte y seguridad electrónica en Spectra Ingeniería (Cali). Administro el entorno **Microsoft 365 / Entra ID** de la empresa y su red, configuro sistemas de **CCTV y control de acceso** en proyectos de clientes y **desarrollo software interno** para la empresa.
 
-Disponible para **prácticas**, **oportunidades laborales** y **proyectos freelance**.
+Estudio Tecnología en Sistemas en la UNIAJC.
 
 ---
 
@@ -59,18 +59,20 @@ Disponible para **prácticas**, **oportunidades laborales** y **proyectos freela
 
 ---
 
-## 💼 Experiencia IT
+## 💼 Experiencia · Spectra Ingeniería S.A.S. (oct. 2023 – actualidad)
 
-- ⚙️ Configuración e implementación de **GLPI** en entorno empresarial real (Spectra Ingeniería)
-- 🖥️ Administración de inventario IT: +59 equipos, +3.300 programas registrados
-- 🔗 Integración con **Active Directory** para gestión de usuarios
-- 🎫 Mesa de ayuda con +25 categorías de tickets en producción
-- 🌐 Configuración de redes y soporte técnico de hardware/software
+**Analista de TI** (actual) · antes **Auxiliar de soporte TI**
+
+- ☁️ Administración del tenant **Microsoft 365 / Entra ID**: usuarios, licencias, Exchange Online, SharePoint y Defender
+- 🌐 Red y servidores: firewall **Sophos**, switches **Allied Telesis** (VLAN), **Windows Server** y **Ubuntu Server**
+- 📹 CCTV y control de acceso en proyectos de clientes: **Hikvision**, **Milestone**, **Pelco**, **IndigoVision**, **Suprema BioStar 2**
+- 🛠️ Sistemas internos en producción: plataforma de TI (inventario, actas, mesa de ayuda) y sistema del Centro de Servicios, que reemplazó un Excel
+- 🎫 Implementación de **GLPI 10** con Active Directory: 32 formularios de mesa de ayuda, inventario de 59+ equipos y 3.300+ programas
 
 ---
 
 <div align="center">
 
-*Abierto a colaborar — si tienes un proyecto interesante, escríbeme.*
+*¿Tienes una idea o un proyecto? Escríbeme.*
 
 </div>

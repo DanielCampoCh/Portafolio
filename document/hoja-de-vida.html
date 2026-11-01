@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hoja de vida – Daniel Campo Chaguendo</title>
+  <meta name="author" content="Daniel Campo Chaguendo" />
+  <!--
+    Fuente de la hoja de vida. Para regenerar el PDF:
+    "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless --disable-gpu --no-pdf-header-footer --print-to-pdf="document\Hoja-de-Vida-Daniel-Campo.pdf" "document\hoja-de-vida.html"
+  -->
+  <style>
+    @page { size: A4; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body {
+      width: 210mm; min-height: 297mm; padding: 13mm 15mm 12mm;
+      font-family: "Segoe UI", Calibri, Arial, sans-serif; font-size: 9.6pt; line-height: 1.42; color: #1d2320;
+      background: #fff;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    header { display: flex; align-items: center; gap: 16px; padding-bottom: 10px; border-bottom: 2px solid #1f8a3b; }
+    header img { width: 74px; height: 74px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    h1 { font-size: 21pt; line-height: 1.1; letter-spacing: .02em; color: #111; }
+    .role { font-size: 11pt; font-weight: 600; color: #1f8a3b; margin-top: 2px; }
+    .contact { font-size: 8.8pt; color: #444; margin-top: 5px; }
+    .contact span + span::before { content: "·"; margin: 0 6px; color: #999; }
+
+    section { margin-top: 11px; }
+    h2 {
+      font-size: 9.6pt; letter-spacing: .12em; text-transform: uppercase; color: #1f8a3b;
+      border-bottom: 1px solid #d7e4da; padding-bottom: 2px; margin-bottom: 6px;
+    }
+    p { margin-bottom: 4px; }
+    ul { padding-left: 15px; }
+    li { margin-bottom: 2.5px; }
+    li::marker { color: #1f8a3b; }
+
+    .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+    .job-head strong { font-size: 10.4pt; }
+    .date { font-size: 8.8pt; color: #555; white-space: nowrap; }
+    .company { margin-bottom: 4px; }
+    .position { margin-top: 6px; margin-bottom: 3px; font-weight: 600; }
+    .position .date { font-weight: 400; margin-left: 6px; }
+
+    .edu div { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 3px; }
+    .tools p { margin-bottom: 3px; }
+    .tools b { color: #111; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../img/perfil.jpg" alt="" />
+    <div>
+      <h1>DANIEL CAMPO CHAGUENDO</h1>
+      <div class="role">Analista de TI · Infraestructura, Microsoft 365 y seguridad electrónica</div>
+      <div class="contact">
+        <span>Cali, Colombia</span>
+        <span><a href="mailto:dchcampo@gmail.com">dchcampo@gmail.com</a></span>
+        <span><a href="https://www.linkedin.com/in/daniel-campo-chaguendo-a43bb02b4">linkedin.com/in/daniel-campo-chaguendo-a43bb02b4</a></span>
+        <span><a href="https://danielcampoch.github.io/Portafolio/">danielcampoch.github.io/Portafolio</a></span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Perfil</h2>
+    <p>
+      Analista de TI con 3 años de experiencia en infraestructura, soporte y seguridad electrónica. Administro el entorno
+      Microsoft 365 / Entra ID de la empresa, apoyo la red y los servidores, configuro sistemas de CCTV y control de acceso
+      en proyectos de clientes y desarrollo aplicaciones internas para la empresa.
+    </p>
+  </section>
+
+  <section>
+    <h2>Experiencia</h2>
+    <div class="job-head">
+      <strong>Spectra Ingeniería S.A.S.</strong>
+      <span class="date">Oct. 2023 – actualidad · Cali</span>
+    </div>
+
+    <div class="position">Analista de TI <span class="date">Cargo actual</span></div>
+    <ul>
+      <li>Administración del tenant Microsoft 365 / Entra ID: usuarios, licencias, Exchange Online, SharePoint/OneDrive y Microsoft Defender.</li>
+      <li>Red y servidores: firewall Sophos, switches Allied Telesis (VLAN y enrutamiento), Windows Server y Ubuntu Server.</li>
+      <li>Configuración de CCTV y control de acceso en proyectos de clientes: Hikvision (HikCentral, NVR), Pelco VideoXpert, IndigoVision, Milestone y Suprema BioStar 2.</li>
+      <li>Apoyo en la migración de plataformas de control de acceso a Azure con SQL Server.</li>
+      <li>Desarrollo de la plataforma interna de TI (inventario, actas de entrega y mesa de ayuda) y del sistema del Centro de Servicios, que reemplazó el control de reparaciones y garantías en Excel.</li>
+      <li>Diagnóstico de equipos y gestión de garantías (RMA) multimarca; informes técnicos, manuales y capacitaciones a usuarios y operadores.</li>
+    </ul>
+
+    <div class="position">Auxiliar de soporte TI <span class="date">Desde oct. 2023</span></div>
+    <ul>
+      <li>Soporte de hardware, software y red a los usuarios de la empresa; administración de cuentas y licencias de Microsoft 365.</li>
+      <li>Implementación de GLPI 10 sobre Ubuntu Server con HTTPS e integración con Active Directory: 32 formularios de mesa de ayuda e inventario de 59+ equipos y 3.300+ programas.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Proyectos</h2>
+    <ul>
+      <li><b>GOLAZO</b> (futbol-mania.vercel.app): sitio de posiciones y resultados de fútbol en vivo con Next.js, TypeScript y PostgreSQL (Supabase), con actualización automática.</li>
+      <li><b>Bosques de Chipichape</b> (bosques-chipichape.netlify.app): directorio web de emprendimientos de un conjunto residencial con Google Apps Script y Google Sheets.</li>
+    </ul>
+  </section>
+
+  <section class="edu">
+    <h2>Educación</h2>
+    <div><span><b>Tecnología en Sistemas de Información</b> · Institución Universitaria Antonio José Camacho (UNIAJC)</span><span class="date">2024 – 2027 (en curso)</span></div>
+    <div><span><b>Técnico laboral en asistencia y soporte de tecnologías de la información</b> · Centro de Capacitación Don Bosco</span></div>
+  </section>
+
+  <section class="tools">
+    <h2>Herramientas</h2>
+    <p><b>Infraestructura:</b> Microsoft 365, Entra ID, Exchange Online, Active Directory, Windows Server, Ubuntu Server, Sophos, Allied Telesis</p>
+    <p><b>Seguridad electrónica:</b> Hikvision, Pelco, IndigoVision, Milestone, Suprema BioStar 2</p>
+    <p><b>Desarrollo:</b> Next.js, TypeScript, React, Laravel, PHP, Java, Google Apps Script, MySQL, PostgreSQL, Git</p>
+  </section>
+
+</body>
+</html>

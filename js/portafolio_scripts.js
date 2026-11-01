@@ -49,7 +49,7 @@ const revealObserver = new IntersectionObserver(function(entries) {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.section-title, .about > *, .exp-card, .service, .skills, .project, .contact, .stat')
+document.querySelectorAll('.section-title, .about > *, .exp-card, .area, .skills, .project, .contact, .stat')
   .forEach(function(el) {
     el.classList.add('reveal');
     revealObserver.observe(el);
